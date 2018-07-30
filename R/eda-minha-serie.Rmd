@@ -1,0 +1,98 @@
+---
+title: "Análise da série: The Simpsons"
+author: "Seu Nome"
+output:
+  html_notebook:
+    toc: yes
+    toc_float: yes
+    code_folding: hide
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(ggplot2)
+library(here)
+library(readr)
+
+# Substitua o filtro com o nome da série que você deseja analisar
+episodios <- read_csv(here("data", "episodios_series_top.csv")) %>%
+  filter(nome_serie == "The Simpsons")
+```
+
+# Apresentação
+
+Inicialmente, vamos exibir os dados para ter uma noção das informações disponíveis. Descreva a série que você vai analisar e que tipo de análise deseja fazer.
+
+```{r}
+episodios
+```
+
+# Popularidade dos episódios
+
+Como o número de votos dos episódios varia?
+
+
+## Quantas avaliações tem por episódio?
+
+
+## Qual o episódio mais popular e o menos popular?
+
+
+## Qual a temporada mais popular e a menos popular?
+
+
+# Qualidade dos episódios
+
+Como a avaliação média dos episódios varia?
+
+
+## Qual a distribuição das avaliações por episódio?
+
+
+## Qual o melhor e o pior episódio segundo o IMDB?
+
+
+## Qual a melhor e a pior temporada segundo o IMDB?
+
+
+# Padrões ao longo do tempo
+
+
+## As primeiras temporadas são melhores que as últimas?
+
+
+## Os episódios no fim das temporadas são melhores que os do início?
+
+
+## Qual é a temporada mais regular?
+
+Temporadas mais regulares possuem episódios com avaliações próximas, sem muita variação.
+
+
+## Qual é a temporada mais instável?
+
+Temporadas mais instáveis possuem episódios com avaliações bem diferentes, com muita variação entre elas.
+
+
+# Valores incomuns
+
+Existem outliers nos dados?
+
+
+## Existem episódios outliers em termos de popularidade?
+
+Valores incomuns de número de votos em relação a outros episódios da série.
+
+
+## Existem episódios outliers em termos de avaliação?
+
+Valores incomuns de avaliação em relação a outros episódios da série.
+
+
+# Outras análises
+
+Fique livre para explorar outras análises, fazer novas perguntas e comparar padrões nos dados de uma série com os de outra série.
